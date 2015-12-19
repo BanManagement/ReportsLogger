@@ -1,0 +1,7 @@
+main: me.confuser.banmanager.reportslogger.ReportsLogger
+name: ReportsLogger
+version: ${project.version}
+authors: [ confuser ]
+website: http://dev.bukkit.org/bukkit-plugins/ban-management/
+description: ${project.description}
+depend: [ BanManager ]
