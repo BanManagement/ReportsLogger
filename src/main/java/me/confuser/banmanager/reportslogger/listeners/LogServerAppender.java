@@ -34,6 +34,9 @@ public class LogServerAppender extends AbstractAppender {
   @Override
   public void append(LogEvent log) {
     String message = log.getMessage().getFormattedMessage();
+
+    if (message == null) return;
+
     boolean ignore = false;
 
     for (String check : plugin.getConfiguration().getContains()) {
