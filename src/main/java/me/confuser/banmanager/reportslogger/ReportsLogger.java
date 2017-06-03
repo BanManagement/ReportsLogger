@@ -3,7 +3,6 @@ package me.confuser.banmanager.reportslogger;
 import lombok.Getter;
 import me.confuser.banmanager.BmAPI;
 import me.confuser.banmanager.bukkitutil.BukkitPlugin;
-import me.confuser.banmanager.internal.mcstats.MetricsLite;
 import me.confuser.banmanager.reportslogger.configs.DefaultConfig;
 import me.confuser.banmanager.reportslogger.listeners.LogServerAppender;
 import me.confuser.banmanager.reportslogger.listeners.ReportListener;
@@ -44,13 +43,6 @@ public class ReportsLogger extends BukkitPlugin {
     }
 
     setupListeners();
-
-    try {
-      MetricsLite metrics = new MetricsLite(this);
-      metrics.start();
-    } catch (IOException e) {
-      // Failed to submit the stats :-(
-    }
   }
 
   public void onDisable() {
